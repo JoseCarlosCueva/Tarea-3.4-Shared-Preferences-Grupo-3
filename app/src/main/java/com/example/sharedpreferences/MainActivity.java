@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean validateCredentials(String username, String password) {
         // Simulación de validación básica
         // En una aplicación real, esto se conectaría a una base de datos
-        return username.equals("jose") && password.equals("josecarlos2001");
+        return username.equals("jose") && password.equals("jose2001");
     }
 
     private void navigateToDashboard() {

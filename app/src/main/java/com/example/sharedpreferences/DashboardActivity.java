@@ -15,6 +15,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     private static final String PREF_NAME = "LoginPrefs";
     private static final String KEY_USERNAME = "username";
+    private static final String KEY_REMEMBER_ME = "remember_me";
     
     private TextView tvWelcome, tvUserInfo;
     private MaterialButton btnLogout;
@@ -56,11 +57,17 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void performLogout() {
-        // Limpiar datos de sesión
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.remove(KEY_USERNAME);
-        editor.putBoolean("remember_me", false);
-        editor.apply();
+        // Verificar si "Recordarme" está marcado
+        boolean rememberMe = sharedPreferences.getBoolean(KEY_REMEMBER_ME, false);
+        
+        // Solo limpiar datos si "Recordarme" NO está marcado
+        if (!rememberMe) {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.remove(KEY_USERNAME);
+            editor.putBoolean(KEY_REMEMBER_ME, false);
+            editor.apply();
+        }
+        // Si "Recordarme" está marcado, mantener los datos pero cerrar sesión
         
         // Regresar a la pantalla de login
         Intent intent = new Intent(this, MainActivity.class);

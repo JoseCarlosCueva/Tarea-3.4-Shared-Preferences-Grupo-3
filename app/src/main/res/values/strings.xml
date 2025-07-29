@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">SharedPreferences</string>
+    <string name="app_logo">Logo de la aplicación</string>
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="login_subtitle">Ingresa tus credenciales para continuar</string>
+    <string name="username_hint">Nombre de usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="remember_me">Recordarme</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="error_empty_fields">Por favor completa todos los campos</string>
+    <string name="error_invalid_credentials">Usuario o contraseña incorrectos</string>
+    <string name="success_login">¡Inicio de sesión exitoso!</string>
+    <string name="welcome_message">Bienvenido, %1$s</string>
+    
+    <!-- Dashboard strings -->
+    <string name="success_icon">Ícono de éxito</string>
+    <string name="welcome_dashboard">¡Bienvenido, %1$s!</string>
+    <string name="user_info">Usuario: %1$s</string>
+    <string name="session_info">Información de Sesión</string>
+    <string name="session_description">Has iniciado sesión exitosamente. Los datos se han guardado usando SharedPreferences y se recuperarán automáticamente la próxima vez que abras la aplicación.</string>
+    <string name="logout_button">Cerrar Sesión</string>
+</resources>
